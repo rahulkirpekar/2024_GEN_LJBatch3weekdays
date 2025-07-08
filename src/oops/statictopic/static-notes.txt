@@ -1,0 +1,117 @@
+			Modifiers
+			  |
+1. Access Modifiers		2. Non-Access Modifiers
+----------------------		-------------------------
+1. private			==> static,abstract,strctfip,final,synchronized,transient
+2. default
+3. protected
+4. public
+
+
+static:-
+--------
+	1. Data Members
+	2. member function
+	3. Innerclass--static	
+
+
+class:-
+-------
+	class A
+	{
+		// Innerclass----Nested Innerclass
+		static class B
+		{
+
+		}
+	}
+-------------------------------------------------------------------------------------------
+Method:-
+--------
+	static method:-
+
+	static void test1()
+	{
+	}
+-------------------------------------------------------------------------------------------
+
+Variable:-
+----------
+
+	Data Members:-
+	-------------
+	class A
+	{
+		// class level variable---Single class--Single Copy
+		private static int no1;
+	}
+
+	local variable:-
+	----------------
+
+	class A
+	{
+		public static void main(String args[])
+		{
+			// local variable---static---X
+			int no;
+		}				
+	}
+
+
+
+	Single School Management Application
+	---------------------------------------
+
+Student---[rno name std marks , static String schoolName]
+
+	50000/- 
+
+
+  s1 	      s2 	    s3 	
+------------------------------------
+rno	   |rno	        |	   |--Per Object Memory allocation
+name	   |name	|	   |--Per Object Memory allocation
+std	   |std	        | 	   |--Per Object Memory allocation
+marks	   |marks	| 	   |--Per Object Memory allocation
+  |		|	    |	
+------------------------------------
+   	     |
+	 schoolName="DPS" 		    --Single Copy(Static)
+s1.schoolName = "DPS";
+
+SOP(s2.schoolName);// DPS
+	
+	s3.schoolName = "ABC";
+
+	SOP(s1.schoolName);// ABC
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
