@@ -1,0 +1,79 @@
+				Type of Relation
+				-------------------
+	1. IS-A Relation			2. HAS-A Relation(Aggregation)	
+	----------------			-----------------------------
+	    |				   Employee  HAS-A  Address(TRUE) 
+	    |				
+	Inheritance:-
+	-------------
+
+class Address
+{
+
+}
+class Employee
+{
+	Address address = new Address();
+}
+				
+			Person 
+			  |
+			Student 
+	
+			Student IS-A Person (TRUE)
+
+
+		Parent/Super/Base
+		  |
+		Child/Derived/Sub
+
+			Type of Inheritance
+			---------------------
+				     Interface(5 Inheritance)
+					|
+		----------------------------------------------------
+		|						|
+	     By-Class(3 Type)					|
+		|						|
+  -----------------------------------		 	 ---------------------	
+     |		   |		   |			    |		   |	
+1. Single	2. MultiLevel	3.Hierarchial		4. Multiple	5. Hybrid
+----------	--------------  --------------		--------------	-------------- 
+	
+								A      B
+								|      |
+							        ---------
+								    |
+								    C	 
+
+
+
+
+
+
+
+		A[A(){}]
+		|
+		B[B(){}]
+
+
+	B obj = new B();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+				Rules of super Constructor 
+				***************************
+
+
+super  constructor call    and the    parent-child rule in inheritance    in Java:
+
+---
+
+    ✅    Basic Rule of Inheritance in Java:   
+
+When a    child class (subclass)    is created, it    inherits    properties and behaviors (fields and methods) from the    parent class (superclass)   .
+
+---
+
+    ✅    Step-by-Step:    super    Constructor Rule   
+
+    🔹 Step 1: Every class in Java has a constructor
+
+* If you don’t create one, Java adds a    default constructor    for you.
+
+   java
+class A {
+    A() {
+        System.out.println("A's constructor");
+    }
+}
+   
+
+---
+
+    🔹 Step 2: Constructor of the parent class is called    first    when creating an object of the child class
+
+* Java uses    super()    to call the parent class constructor.
+
+   java
+class A {
+    A() {
+        System.out.println("Parent constructor");
+    }
+}
+
+class B extends A {
+    B() {
+        System.out.println("Child constructor");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        B b = new B();  // Output:
+                        // Parent constructor
+                        // Child constructor
+    }
+}
+   
+
+---
+
+    🔹 Step 3:    super()    must be the    first statement    in the child class constructor
+
+   java
+class B extends A {
+    B() {
+        super(); // Must be first line
+        System.out.println("Child constructor");
+    }
+}
+   
+
+---
+
+    🔹 Step 4: If parent class has    parameterized constructor   , child must explicitly call it using    super(args)   
+
+   java
+class A {
+    A(String msg) {
+        System.out.println("Parent: " + msg);
+    }
+}
+
+class B extends A {
+    B() {
+        super("Hello");  // Passes argument to parent constructor
+        System.out.println("Child constructor");
+    }
+}
+   
+
+---
+
+    🔹 Step 5: If you don’t call    super(...)   , Java will try to call    super()    by default
+
+* If the parent has    no default constructor   , you will get a    compilation error   .
+
+❌ This will give an error:
+
+   java
+class A {
+    A(String msg) { } // No default constructor
+}
+
+class B extends A {
+    B() {
+        // Java tries to add super() here by default => error
+        System.out.println("Child");
+    }
+}
+   
+
+✅ Fix:
+
+   java
+class B extends A {
+    B() {
+        super("Hi");
+        System.out.println("Child");
+    }
+}
+   
+
+---
+
+    ✅ Summary of Rules
+
+| Rule                             | Description                                            |
+| -------------------------------- | ------------------------------------------------------ |
+|    super()                       | Calls parent class constructor                         |
+| Must be first line               |    super()    must be first statement in child constructor |
+| Default call                     | If not written, Java adds    super()    implicitly         |
+| Parameterized parent constructor | Then    super(args)    must be called manually             |
+| No constructor in parent         | Java adds default constructor automatically            |
+
+---
+
+    ✅ Real Life Analogy:
+
+* Think of a    Child class    like a    son    and    Parent class    like a    father   .
+* When a    son is born   ,    father must exist first    — so the parent constructor runs first.
+
