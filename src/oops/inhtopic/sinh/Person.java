@@ -16,3 +16,18 @@ public class Person
 		this.name = name;
 	}
 }
+/*
+
+
+
+1. Inheritance
+
+2. final[Local variable ,Dm's, method , class]
+
+3. Polymorphism
+	Compiletime Polymorphism
+	Runtime Polymorphism
+
+4. abstraction
+---------------------------------
+*/
