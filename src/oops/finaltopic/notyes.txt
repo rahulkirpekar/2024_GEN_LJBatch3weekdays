@@ -1,0 +1,12 @@
+final -- Non-Access Modifier
+-------
+
+	1. local variable
+	2. data members
+	3. member function
+	4. class
+
+			A(void test(){ "A -- logic"})
+			|
+			B(void test(){ "B -- logic" })--Method Overridding
+

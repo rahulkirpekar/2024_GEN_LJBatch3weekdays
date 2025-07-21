@@ -1,0 +1,70 @@
+String---Multiple Characters
+-------------------------------
+			Ways to operate String-Data in Java
+			------------------------------------
+	1. ImmutableWay					2. MutableWay
+	-----------------				-----------------
+	==> String(class)				==> StringBuilder(class)
+							==> StringBuffer(class)
+--------------------------------------------------------------------------------------------------------------------
+1. ImmutableWay[String] :-
+------------------------------
+
+Two ways to create object in Java
+-----------------------------------
+
+
+1. By String literal way[RAM----HEAP---[SCP]---[String Constant Pool]]:-
+------------------------------------------------------------------------
+				
+			String name1 = "royal";
+			String name2 = "royal";
+			String name3 = "technosoft";
+			String name4 = name1;
+
+Object Equality:-
+----------------
+			reference Based(==)			values Based(.equals)
+			--------------------			----------------------
+			1. SOP(name1==name2);//true		1. SOP(name1.equals(name2));//true
+			2. SOP(name1==name3);//false		2. SOP(name1.equals(name3));//false
+			3. SOP(name1==name4);//true		3. SOP(name1.equals(name4));//true
+ 
+2. by 'new' keyword way[RAM-----HEAP]:-
+-----------------------------------------
+
+			String name1 = new String("royal");
+			String name2 = new String("royal");
+			String name3 = new String("technosoft");
+			String name4 = name1;
+Object Equality:-
+----------------
+			reference Based(==)			values Based(.equals)
+			--------------------			----------------------
+			1. SOP(name1==name2);//true		1. SOP(name1.equals(name2));//true
+			2. SOP(name1==name3);//false		2. SOP(name1.equals(name3));//false
+			3. SOP(name1==name4);//true		3. SOP(name1.equals(name4));//true
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
