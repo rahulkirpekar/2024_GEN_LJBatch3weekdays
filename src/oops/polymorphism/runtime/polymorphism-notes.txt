@@ -1,0 +1,24 @@
+
+
+
+				Person(void getBehave()---Human)
+				  |
+	-------------------------------------------------
+	|			  |			|
+       Home		         Org	 	       School	
+     getBehave()              getBehave()             getBehave()
+	|			  |			|
+      child                     Employee              Student
+
+	Person person = null;
+
+
+	// 	
+	person = new Home();
+	person.getBehave(); 
+
+	person = new Org();
+	person.getBehave(); 
+
+	person = new School();
+	person.getBehave(); 
