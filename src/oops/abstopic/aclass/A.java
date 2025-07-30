@@ -1,4 +1,4 @@
-package oops.abstopic;
+package oops.abstopic.aclass;
 
 // 0% to 100%
 public abstract class A 

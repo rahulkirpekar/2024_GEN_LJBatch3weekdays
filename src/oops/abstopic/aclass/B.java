@@ -1,4 +1,4 @@
-package oops.abstopic;
+package oops.abstopic.aclass;
 
 public class B extends A
 {

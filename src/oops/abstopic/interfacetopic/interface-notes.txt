@@ -1,0 +1,172 @@
+Abstraction:- Security ===> Application
+-------------
+			Type of Abstraction
+			-------------------
+	1. 0% to 100%				2. 100% 
+	-----------------			-----------------
+	===> Abstract class			===> interface
+	
+1. 0% to 100% Abstraction:-
+---------------------------
+
+
+	abstract class A
+	{
+		// 1. Data Members
+
+		// 2. Methods
+			//1. Abstract Methods--"Abstraction"
+
+			abstract returnType funName(arguments);
+
+			//2. Non-Abstract Methods
+
+		// 3. constructors
+	}
+
+
+Features of   abstract classes in Java:
+---------------------------------------------
+1. Declared using abstract keyword – Both class and its methods can be marked as abstract.
+2. Cannot be instantiated – You cannot create objects of an abstract class directly.
+3. Can have abstract and non-abstract methods – Abstract classes can contain a mix of methods with and without implementations.
+4. Supports constructors – Abstract classes can have constructors to initialize common fields.
+5. Can have member variables – Both static and instance variables are allowed.
+6. Can have static methods – Abstract classes can include static methods with implementations.
+7. Can have final methods – Prevents overriding in subclasses.
+8. Inheritance allowed – Must be inherited by a concrete (non-abstract) subclass to provide implementations of abstract methods.
+9. Supports access modifiers – Abstract methods can be public, protected, or package-private (not private).
+10. Single inheritance – A class can extend only one abstract class (since Java doesn't support multiple inheritance of classes).
+11. Implements interfaces – Abstract classes can implement interfaces and provide partial or full implementation.
+12. Can contain main method – Abstract classes can have a main() method and be run like a normal class.
+13. Can have any type of variables – final, static, or non-final variables are allowed.
+14. Subclasses must implement abstract methods – Unless the subclass itself is declared abstract.
+
+
+
+interface:-
+-----------
+	     Interface		class			Interface		class
+		|---implements	 |--extends		   |--extends		  |-----X(Not Possible in Java) 	
+	      class		class			Interface		Interface
+				
+
+	public interface A
+	{
+		// 1. Constant variables---[public static final]
+		public static final int no1=10;// public static final
+
+		// 2. methods
+			// 1. Abstract methods--[public abstract]
+			void test1();// public abstract 
+	
+			// 2. Non-Abstract methods
+				//1. static method(Java-8)
+				//2. default method(Java-8)
+				//3. private method(Java-9)
+	}	
+
+
+
+
+Features of an interface in Java:
+--------------------------------------
+1. Pure Abstraction
+
+   ===>  By default, all methods in an interface are abstract (except default and static methods in Java 8+).
+   ===>  Interfaces specify ===> what to do===> , not ===> how to do it===> .
+
+2. Multiple Inheritance
+
+   ===>  A class can implement multiple interfaces, allowing Java to achieve multiple inheritance.
+
+3. Only Method Declarations (till Java 7)
+
+   ===>  Interfaces cannot have method bodies (except default and static methods from Java 8 onwards).
+   ===>  All methods are implicitly public and abstract.
+
+4. Variables are Public, Static, and Final
+
+   ===>  All variables in an interface are implicitly public, static, and final (constants).
+
+5. Cannot Instantiate
+
+   ===>  Interfaces cannot be instantiated directly; they must be implemented by a class or extended by another interface.
+
+6. Implements Keyword
+
+   ===>  A class uses the implements keyword to use an interface.
+
+7. Extends Keyword
+
+   ===>  An interface can extend another interface using extends.
+
+8. Supports Polymorphism
+
+   ===>  Objects of implementing classes can be referred to by interface type for achieving runtime polymorphism.
+
+9. Default and Static Methods (Java 8+)
+
+   ===>  Interfaces can have default methods with a body.
+   ===>  Interfaces can have static methods.
+
+10. Private Methods (Java 9+)
+
+    ===>  Interfaces can have private methods to share code between default methods.
+
+11. No Constructors
+
+    ===>  Interfaces cannot have constructors because they cannot be instantiated.
+
+12. Marker Interfaces
+
+    ===>  An interface with no methods or fields is called a marker interface (e.g., Serializable, Cloneable).
+
+
+Tabular comparison of Interface vs Abstract Class or just keep the features list
+----------------------------------------------------------------------------------
+
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|   Aspect                         |   Interface                                                                                                     |   Abstract Class                                                                       |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|   Keyword Used                   | `interface`                                                                                                     | `abstract class`                                                                       |
+|   Implementation                 | A class implements an interface using `implements`                                                              | A class extends an abstract class using `extends`                                      |
+|   Multiple Inheritance           | Supports multiple inheritance (a class can implement multiple interfaces)                                       | Does   not   support multiple inheritance (a class can extend only one abstract class) |
+|   Methods                        | All methods are `public` and `abstract` by default (except `default`, `static`, `private` methods in Java 8/9+) | Can have abstract methods and concrete (implemented) methods                           |
+|   Access Modifiers for Methods   | Only `public` allowed                                                                                           | Can use any access modifier (`public`, `protected`, `private`)                         |
+|   Variables                      | All variables are `public`, `static`, and `final` by default                                                    | Can have instance variables, static variables, and constants with any access modifier  |
+|   Constructors                   | Cannot have constructors                                                                                        | Can have constructors (used for initialization in subclasses)                          |
+|   Inheritance Type               | A class can implement multiple interfaces                                                                       | A class can extend only one abstract class                                             |
+|   Polymorphism                   | Achieved via interface references                                                                               | Achieved via abstract class references                                                 |
+|   Use Case                       | Used to define a contract that multiple classes can implement                                                   | Used when classes share common behavior/code and need partial abstraction              |
+|   Java 8+ Features               | Supports `default` and `static` methods                                                                         | Supports all normal methods and abstract methods                                       |
+|   Java 9+ Features               | Supports `private` methods (for internal use)                                                                   | No such restriction, behaves like a normal class with abstract features                |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
