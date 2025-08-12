@@ -1,0 +1,63 @@
+String Data:- Multiple Characters
+------------
+
+		Ways of Operation on String-Data
+		---------------------------------
+	1. ImmutabelWay				2. MutabelWay
+	-----------------			--------------
+	===>String				===>StringBuilder
+						===>StringBuffer
+--------------------------------------------------------------------------------------------------
+1. String--ImmutabelWay:-
+-------------------------
+	Ways to create objects of String:-
+	-----------------------------------
+
+		1. By String Literal Way[RAM------HEAP-----SCP(String Constant Pool)]:-
+		----------------------------------------------------------------------------
+			
+			String name1 = "royal";		
+			String name2 = "royal";		
+			String name3 = "technosoft";		
+			String name4 = name1 + name3;// royaltechnosoft
+			String name5 = name1.replace('a','o');// rayal
+			String name6 = name1;
+Object Equality:-
+----------------
+			1. reference(==)		2. value(.equals)
+			-----------------		-----------------
+
+			SOP(name1==name2);// true	SOP(name1.equals(name2));// true
+			SOP(name1==name3);// false	SOP(name1.equals(name3));// false
+			SOP(name1==name4);// false	SOP(name1.equals(name3));// false
+			SOP(name1==name6);// true	SOP(name1.equals(name6));// true
+
+
+		2. By 'new' keyword  Way [RAM------HEAP] :-
+		-------------------------------------------------------------
+			String name1 = new String("royal");		
+			String name2 = new String("royal");		
+			String name3 = new String("technosoft");		
+			String name4 = name1 + name3;// royaltechnosoft
+			String name5 = name1.replace('a','o');// rayal
+			String name6 = name1;
+
+
+			1. reference(==)		2. value(.equals)
+			-----------------		-----------------
+
+			SOP(name1==name2);// false	SOP(name1.equals(name2));// true
+			SOP(name1==name3);// false	SOP(name1.equals(name3));// false
+			SOP(name1==name4);// false	SOP(name1.equals(name3));// false
+			SOP(name1==name6);// true	SOP(name1.equals(name6));// true
+
+
+
+
+
+
+
+			
+
+
+
