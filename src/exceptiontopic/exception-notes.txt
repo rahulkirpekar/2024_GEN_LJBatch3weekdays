@@ -1,0 +1,104 @@
+Exception:- Abnormal Scenario.
+-----------
+
+1.ArithmeticException:-
+------------------------
+	10 / 0; // ArithmeticException
+
+
+2. NullpointerException:-
+--------------------------
+	String name = null;
+	SOP(name.length());// NullPointerException
+
+3. ArrayIndeexoutofBoundException:-
+------------------------------------
+	int a[] = new int[5];// a[0],...a[4]
+	a[5] = 10;// ArrayIndexoutofBoundException
+
+4. StringIndexoutofBoundException:-
+------------------------------------
+		 //    01234
+	String name = "Royal";
+	SOP(name.charAt(5));// StringIndexoutofBoundException
+
+5. ClassCastException:-
+--------------------------
+			A
+			|
+		-----------------
+		|		|
+		B		C	
+
+	A obj = new B();
+	
+	C objC = (C)obj; // ClassCastException
+
+6. NumberFormateException:-
+------------------------------
+
+	String value = "1a2b3";
+	SOP(Integer.parseInt(value));// NumberFormateException
+
+
+
+
+		Type of Exception
+		--------------------
+     Compiler				       JVM
+	|					|
+--------------------			--------------------
+1. Checked Exception			2. UnChecked Exception
+---------------------			------------------------
+CompileTime Exception			RuntimeTime Exception
+   
+
+			Hierarchy of Exception
+			-------------------------
+
+				Throwable(C)
+				    |
+				Exception(C)
+				    |
+	-------------------------------------------------
+        |--checked exception				|--Unchecked exception
+--IOException  					RuntimeException(C)
+--FileNotFoundException					|
+--SQLException				---ArithmeticException
+--ClassNotfoundException		---NullpointerException
+					---StringIndexoutofBoundException
+					---NumberFormatException
+					---ClasscastException
+					---ArrayindexoutofBoundException,...
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
