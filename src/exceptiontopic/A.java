@@ -1,5 +1,12 @@
 package exceptiontopic;
 
-public class A {
+import java.io.IOException;
+
+public class A 
+{
+	public void test() throws Exception
+	{
+
+	}
 
 }

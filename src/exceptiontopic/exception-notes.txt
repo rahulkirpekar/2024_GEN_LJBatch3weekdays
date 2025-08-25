@@ -77,6 +77,66 @@ CompileTime Exception			RuntimeTime Exception
 
 
 
+Rule of Method Overrdding With Exception
+-------------------------------------------
+
+class A
+{
+	void test()
+	{
+	}
+}
+class B extends A
+{
+	void test()
+	{
+	}
+}
+
+Rule of Method Overrdding With Exception
+-------------------------------------------
+
+class A
+{
+	void test()
+	{
+	}
+}
+class B extends A
+{
+	void test()
+	{
+	}
+}
+
+1. if the superclass method does not declare an exception
+-----------------------------------------------------------
+	subclass overridden method cannot declare the checked exception 
+but it can declare unchecked exception.
+
+
+2. If the superclass method declares an exception
+---------------------------------------------------
+	===> subclass overridden method can declare same, 
+	===> subclass exception or 
+	===> no exception 
+	===> but cannot declare parent exception.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	
