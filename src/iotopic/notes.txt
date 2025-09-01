@@ -1,0 +1,13 @@
+
+String Data
+-------------
+
+	1. Byteoriented Way		2. Character Orientedway
+	-------------------		------------------------
+write--FileOutpuStream			1. FileWriter
+
+read---FileInputStream			2. FileReader
+
+					
+
+
