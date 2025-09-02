@@ -41,7 +41,7 @@ Object Equality:-
 ----------------
 			reference Based(==)			values Based(.equals)
 			--------------------			----------------------
-			1. SOP(name1==name2);//true		1. SOP(name1.equals(name2));//true
+			1. SOP(name1==name2);//false		1. SOP(name1.equals(name2));//true
 			2. SOP(name1==name3);//false		2. SOP(name1.equals(name3));//false
 			3. SOP(name1==name4);//true		3. SOP(name1.equals(name4));//true
 
