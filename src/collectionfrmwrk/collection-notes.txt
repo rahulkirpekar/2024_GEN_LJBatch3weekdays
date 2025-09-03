@@ -1,0 +1,105 @@
+Array Limitations:-
+--------------------
+
+	int a[] = new int[5];// SIZE,TYPE
+
+	1. SIZE
+	2. TYPE
+
+Collection:- To overcome limitations of Array
+-----------
+			Hierarchy of Collection[import java.util.*]
+			------------------------
+
+				Iterable(I)----------------------------------------------
+				   |							|
+				Collection(I)						|
+				   |							|	
+				   |--Data--Value					|
+				   |							|
+	----------------------------------------------------				|	
+	|			   |			  |				|
+      List(I)			Set(I)			Queue(I)		       Map(I)(Key,Value)
+	|			   |			  |				|
+AbstractList(AC)	    AbstractSet(AC)	  AbstractQueue(AC)		  AbstractMap(AC)
+	|			   |			  |				|
+--ArrayList(C)		--HashSet(C)		--PriorityQueue(C)		--HashMap(C)
+--LinkedList(C)		--LinkedHashSet(C)					--LinkedHashMap(C)
+--Vector(C)		--TreeSet(C)						--TreeMap(C)	
+
+
+List(I) Features:-
+-------------------
+	1. Maintain Insertion Order
+	2. Allows Duplciate values
+	3. Access Index Based
+	4. contain null values	
+
+ArrayList[Dynamic Array]:-
+------------------------------
+
+	1. Dynamic Array
+	2. Ordered Collection
+	3. Allows Duplicate Values
+	4. Random Access[get(Index)]
+	5. store multiple null values	
+	6. grow stretegy[10 size default = [Total size = old SIZE  + NEWSIZE(OLD/2)]]
+
+	ArrayList list = new ArrayList();// 10 SIZE
+	list.add();// 10 values
+	list.add();// 15 = 10 + 5(old cap/2)
+
+			22 = 15 + 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
