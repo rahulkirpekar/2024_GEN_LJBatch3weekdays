@@ -1,0 +1,20 @@
+
+1. show databases;
+2. create database genlj24;
+3. use genlj24;
+4.
+	CREATE TABLE student
+	(
+		rno int PRIMARY KEY AUTO_INCREMENT,
+		name varchar(50),
+		std int,
+		marks int
+	);
+
+5.  show tables;
+6.  desc student;
+7. INSERT INTO student(name,std,marks) VALUES('rahul',12,100);
+8. UPDATE
+9. DELETE
+10. SELECT
+
