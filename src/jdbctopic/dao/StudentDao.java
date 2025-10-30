@@ -99,6 +99,39 @@ public class StudentDao
 		}
 		return rowsAffected;
 	}
+	
+	public StudentBean getStudentbyRno(int rno) 
+	{
+		String selectByRno = "SELECT * FROM student WHERE rno = " + rno;
+		Connection conn = DBConnection.getConnection();
+		Statement stmt = null;
+		ResultSet rs = null;
+		StudentBean s = null;
+		if (conn != null) 
+		{
+			try 
+			{
+				stmt = conn.createStatement();
+				rs = stmt.executeQuery(selectByRno);//Singlee Record---StudentBean 
+				rs.next();
+				int rno1 = rs.getInt(1);
+				String name = rs.getString(2);
+				int std = rs.getInt(3);
+				int marks = rs.getInt(4);
+				
+				s = new StudentBean(rno1, name, std, marks);
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		}else 
+		{
+			System.out.println("StudentDao---getSutdentbyRno() Db not connected");
+		}
+		return s;
+	}
+	
+	
 	public ArrayList<StudentBean> getAllRecords() 
 	{
 		String selectQuery = "SELECT * from student"; 
@@ -143,8 +176,24 @@ public class StudentDao
 	}
 	public static void main(String[] args) 
 	{
-		//-----------UPDATE STUNDET-----------------------	
 		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Rno Which you want to Search student record : ");
+		int rno = sc.nextInt();
+		
+		StudentDao dao = new StudentDao();
+
+		StudentBean s =	dao.getStudentbyRno(rno);
+		
+		if(s!=null) 
+		{
+			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd()+" " + s.getMarks());
+		}else 
+		{
+			System.out.println("Rno not present in record");
+		}
+/*		
+		//-----------UPDATE STUNDET-----------------------	
 
 		
 		StudentDao dao = new StudentDao();
@@ -157,7 +206,6 @@ public class StudentDao
 			
 			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd()+" " + s.getMarks());
 		}
-/*		
 		System.out.println("Enter Rno Which you want to Update student record : ");
 		int rno = sc.nextInt();
 		sc.nextLine();
