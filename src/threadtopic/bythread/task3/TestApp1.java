@@ -1,5 +1,17 @@
 package threadtopic.bythread.task3;
 
+//Online Ticket Booking System Concepts[Synchronization]: 
+//------------------------------------------------------------
+//Thread Safety Description: 
+//
+//	Total Seats = 20 
+//
+//	Thread 1 → User A books 2 seats 
+//
+//	Thread 2 → User B books 3 seats 
+//
+//	Thread 3 → User C checks seat availability Ensure no overbooking happens. give me code in java
+
 public class TestApp1 
 {
 	public static void main(String[] args) 
